@@ -3,11 +3,11 @@
     <div class="section">
 
       <h1>ReMedFul</h1>
-      <input type="email" class="form-control form-control-sml" placeholder="Enter email">
+      <input type="email" v-model="email" class="form-control form-control-sml" placeholder="Enter email">
       <input type="password" class="form-control form-control-sml" placeholder="Enter password">
       <a href="#"><button class="button">Patient Sign Up</button></a>
       <a href="#"><button class="button">Doctor Sign Up</button></a>
-      <button class="button">Sign in</button>
+      <button class="button" @click="onLogin">Sign in</button>
 
       <div class="video-container">
         <div class="color-overlay"></div>
@@ -66,3 +66,20 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  data() {
+    return {
+      email: ""
+    }
+  },
+  methods: {
+    onLogin() {
+      console.log(this.email)
+    }
+  }
+}
+</script>
+
