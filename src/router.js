@@ -9,6 +9,7 @@ import Landing from './views/Landing.vue'
 import PatientOnboarding from './views/PatientOnboarding.vue'
 import DoctorOnboarding from './views/DoctorOnboarding.vue'
 import PatientHippa from './views/PatientHippa.vue'
+import DoctorHippa from './views/DoctorHippa.vue'
 
 Vue.use(Router)
 
@@ -59,6 +60,12 @@ export default new Router({
       path: '/PatientHippa',
       name: 'PatientHippa',
       component: PatientHippa
+    },
+    {
+      path: '/doctor-hippa',
+      name: 'doctor-hippa',
+      component: DoctorHippa
     }
+
   ]
 })
