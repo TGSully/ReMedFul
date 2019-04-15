@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import PatientDetails from './views/PatientDetails.vue'
+import AddPerscription from './views/AddPerscription.vue'
+import PatientDashboard from './views/PatientDashboard.vue'
+import DoctorDashboard from './views/DoctorDashboard.vue'
 
 Vue.use(Router)
 
@@ -12,12 +16,24 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/PatientDetails',
+      name: 'PatientDetails',
+      component: PatientDetails
+    },
+    {
+      path: '/AddPerscription',
+      name: 'AddPerscription',
+      component: AddPerscription
+    },
+    {
+      path: '/PatientDashboard',
+      name: 'PatientDashboard',
+      component: PatientDashboard
+    },
+    {
+      path: '/DoctorDashboard',
+      name: 'DoctorDashboard',
+      component: DoctorDashboard
     }
   ]
 })
