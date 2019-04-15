@@ -29,7 +29,7 @@
 
 
       <br /><br />
-      <a href="Hippa.html"> <input type="submit" name="login" value="Login"></a>
+      <a class="waves-effect waves-light btn modal-trigger" href="#hippa2">Save Details</a>
     </center>
 
   </div>
