@@ -5,10 +5,11 @@
       <router-link to="/PatientDetails">Patient Detail</router-link> |
       <router-link to="/AddPerscription">Add Perscription</router-link> |
       <router-link to="/PatientDashboard">Patient Dashboard</router-link> |
-      <router-link to="/DoctorDashboard">Doctor Dashboard</router-link>
+      <router-link to="/DoctorDashboard">Doctor Dashboard</router-link> |
       <router-link to="/landing">Landing</router-link> |
       <router-link to="/patient-onboarding">Patient Onboarding</router-link> |
-      <router-link to="/doctor-onboarding">Doctor Onboarding</router-link>
+      <router-link to="/doctor-onboarding">Doctor Onboarding</router-link> |
+      <router-link to="/PatientHippa">Patient Hippa</router-link>
     </div>
     <router-view/>
   </div>

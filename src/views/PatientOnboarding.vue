@@ -29,9 +29,14 @@
 
       <br /><br />
 
-      <a href="Hippa2.html"> <input type="submit" name="login" value="Login"></a>
+      <a class="Patient" href="hippa1">Modal</a>
+
     </center>
+
+    
 
   </div>
 
 </template>
+
+

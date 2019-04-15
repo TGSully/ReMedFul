@@ -8,6 +8,7 @@ import DoctorDashboard from './views/DoctorDashboard.vue'
 import Landing from './views/Landing.vue'
 import PatientOnboarding from './views/PatientOnboarding.vue'
 import DoctorOnboarding from './views/DoctorOnboarding.vue'
+import PatientHippa from './views/PatientHippa.vue'
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ export default new Router({
       path: '/doctor-onboarding',
       name: 'doctor-onboarding',
       component: DoctorOnboarding
+    },
+    {
+      path: '/PatientHippa',
+      name: 'PatientHippa',
+      component: PatientHippa
     }
   ]
 })
