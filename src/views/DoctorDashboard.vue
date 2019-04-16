@@ -2,19 +2,15 @@
   <div class="DoctorDashboard">
     <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
 
-<img src="logo.jpg"  class="center">
+  <div class="home">
+    <img alt="ReMedFul logo" src="../assets/logo.png">
+  </div>
     
 <p>
 <label>Doctor Name: 
-<input type="text" name="patient" required>
+<!-- <input type="text" name="patient" required> -->
 </label> 
 </p>
-
-<p>
-<label>Doctor Identification Number: 
-<input type="text" name="patient" required>
-</label> 
-</p>    
 
     <br>
     <br>
@@ -33,25 +29,25 @@
 </label> 
 </p>
 
-<p>
+<!-- <p>
 <label>Medication Patient is Currently On:
 <input type="text" name="other">
 </label>
-</p>
+</p> -->
 
-<p>
+<!-- <p>
 <label>If New Patient, Please Type Patients Name:
 <input type="text" name="other">
 </label>
 </p>
-    
-<p>
+     -->
+<!-- <p>
 <label>Special Instructions Patient Follows:
 <textarea name="comments" maxlength="500"></textarea>
 </label>
-</p>
+</p> -->
 
-<p><button>Enter</button></p>
+<a class="waves-effect waves-light btn" @click="selectPatient">Patient Details</a>
 
 </form>
   </div>
@@ -135,3 +131,20 @@ cursor: pointer;
 }
 </style>
 
+
+<script>
+export default {
+  name: 'DoctorDashboard',
+  data() {
+    return {
+    }
+  },
+  methods: {
+    selectPatient() {
+      console.log("selected patient")
+      this.$router.push("/PatientDetails")
+    }
+    
+  }
+}
+</script>

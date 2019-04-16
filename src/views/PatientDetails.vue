@@ -17,20 +17,46 @@
         <br>
         <div>
         
-        <a href="addprescription.html" class = "waves-effect waves-light btn-large">Add Prescription<i class="material-icons">add_box</i></a>
+        <a href="#" class = "waves-effect waves-light btn-large" @click="addPerscription">Add Prescription<i class="material-icons">add_box</i></a>
         
         </div>
         <br>
         <div>
         
-        <a href="modifyprescription.html" class = "waves-effect waves-light btn-large">Edit Prescription<i class="material-icons">build</i></a>
+        <a href="modifyprescription.html" class = "waves-effect waves-light btn-large" @click="removePerscription">Remove Prescription<i class="material-icons">build</i></a>
         
         </div>
         <br>
         <div>
             
-        <a href="#" class = "waves-effect waves-light btn-large"><i class="material-icons">arrow_back</i>Back to Profile</a>
-            
+        <!-- <a href="#" class = "waves-effect waves-light btn-large"><i class="material-icons">arrow_back</i>Back to Profile</a> -->
+        <a class="waves-effect waves-light btn" @click="backToPatients"><i class="material-icons">arrow_back</i>Back to Patient List</a>
         </div>
   </div>
 </template>
+
+
+<script>
+export default {
+  name: 'PatientDetails',
+  data() {
+    return {
+    }
+  },
+  methods: {
+    addPerscription() {
+      console.log("add Perscript")
+      this.$router.push("/AddPerscription")
+    },
+    removePerscription() {
+      console.log("remove perscript")
+      this.$router.push("/PatientDetails")
+    },
+    backToPatients() {
+      console.log("Back to patient list")
+      this.$router.push("/DoctorDashboard")
+    }
+    
+  }
+}
+</script>

@@ -10,7 +10,6 @@
       <router-link to="/patient-onboarding">Patient Onboarding</router-link> |
       <router-link to="/doctor-onboarding">Doctor Onboarding</router-link> |
       <router-link to="/PatientHippa">Patient Hippa</router-link> |
-      <router-link to="/doctor-onboarding">Doctor Onboarding</router-link> |
       <router-link to="/doctor-hippa">Doctor Hippa</router-link>
     </div>
     <router-view/>

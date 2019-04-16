@@ -2,18 +2,14 @@
   <div class="PatientDashboard">
     <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
 
-<img src="logo.jpg"  class="center">
+    <div class="home">
+      <img alt="ReMedFul logo" src="../assets/logo.png">
+    </div>
     
 <p>
 <label>Patient Name: 
-<input type="text" name="patient" required>
+<!-- <input type="text" name="patient" required> -->
 </label> 
-</p>
-
-<p>
-<label>Phone Number:
-<input type="tel" name="phone_number">
-</label>
 </p>
 
     <br>
@@ -38,12 +34,12 @@
 </select>
 </label> 
 </p>
-
+<!-- 
 <p>
 <label>If Chosen Other, Please Specify:
 <input type="text" name="other">
 </label>
-</p>
+</p> -->
 
 <p>
 <label>Special Instructions Requested by Doctor:
@@ -51,7 +47,9 @@
 </label>
 </p>
 
-<p><button>Took 1 Pill</button></p>
+<!-- <p><button @click="tookPill">Took 1 Pill</button></p> -->
+<a class="waves-effect waves-light btn-large" @click="tookPill">Took 1 Pill</a>
+
 
 </form>
 
@@ -135,3 +133,22 @@ background: lavender;
 cursor: pointer;
 }
 </style>
+
+
+
+<script>
+export default {
+  name: 'PatientDashboard',
+  data() {
+    return {
+    }
+  },
+  methods: {
+    tookPill() {
+      console.log("took 1 pill")
+      this.$router.push("/PatientDashboard")
+    }
+    
+  }
+}
+</script>

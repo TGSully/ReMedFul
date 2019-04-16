@@ -1,12 +1,15 @@
 <template>
   <div class="landing">
+      <div class="home">
+        <img alt="ReMedFul logo" src="../assets/logo.png">
+      </div>
     <div class="section">
 
-      <h1>ReMedFul</h1>
+      <!-- <h1>ReMedFul</h1> -->
       <input type="email" v-model="email" class="form-control form-control-sml" placeholder="Enter email">
-      <input type="password" class="form-control form-control-sml" placeholder="Enter password">
-      <a href="#"><button class="button">Patient Sign Up</button></a>
-      <a href="#"><button class="button">Doctor Sign Up</button></a>
+      <input type="password" v-model="password" class="form-control form-control-sml" placeholder="Enter password">
+      <a href="#"><button  class="button" @click="onPatientSignUp">Patient Sign Up</button></a>
+      <a href="#"><button class="button" @click="onDoctorSignUp">Doctor Sign Up</button></a>
       <button class="button" @click="onLogin">Sign in</button>
 
       <div class="video-container">
@@ -69,15 +72,29 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Landing',
   data() {
     return {
-      email: ""
+      email: "",
+      password: ""
     }
   },
   methods: {
     onLogin() {
-      console.log(this.email)
+      console.log(this.email, this.password)
+      if(this.mln){  // if a Medical liscense number exists, then its a doctor
+        this.$router.push("/DoctorDashboard")
+      }else {
+        this.$router.push("/PatientDashboard")
+      }
+    },
+    onPatientSignUp() {
+      console.log("email:" + this.email + "password:" + this.password)
+      this.$router.push("/patient-onboarding")
+    },
+    onDoctorSignUp() {
+      console.log("email:" + this.email + "password:" + this.password)
+      this.$router.push("/doctor-onboarding")
     }
   }
 }

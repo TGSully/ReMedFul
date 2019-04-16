@@ -17,6 +17,24 @@
             </p> 
         </div>
         
-        <button class="button">Agree</button>
+        <button class="button" @click="agree">Agree</button>
   </div>
 </template>
+
+
+<script>
+export default {
+  name: 'PatientHippa',
+  data() {
+    return {
+    }
+  },
+  methods: {
+    agree() {
+      console.log("agreed to hippa")
+      this.$router.push("/PatientDashboard")
+    }
+    
+  }
+}
+</script>

@@ -5,31 +5,27 @@
     </p>
 
     <center>
-      <p>New Username:</p> <input type="text" name="username" placeholder="username" required>
-      <br /><br />
-      <p>New Password:</p> <input type="password" name="password" placeholder="password" required>
 
-      <br /><br />
-      <p>First Name:</p> <input type="text" name="fname" placeholder="enter first name" required>
+      <p>First Name:</p> <input type="text" v-model="firstName" name="fname" placeholder="enter first name" required>
 
       <br /><br />
 
-      <p> Last Name: </p><input type="text" name="lname" placeholder="enter last name" required>
+      <p> Last Name: </p><input type="text" v-model="lastName" name="lname" placeholder="enter last name" required>
 
       <br /><br />
 
-      <p>Social Security Number:</p> <input type="text" name="SSN" placeholder="enter SSN" required>
+      <p>Social Security Number:</p> <input type="text" v-model="ssn" name="SSN" placeholder="enter SSN" required>
 
       <br /><br />
 
-      <p> Date of Birth:</p> <input type="text" name="DOB" placeholder="month/date/year" required>
+      <p> Date of Birth:</p> <input type="text" v-model="dob" name="DOB" placeholder="month/date/year" required>
       <br /><br />
-      <p>Sex:</p><input type="text" name="sex" placeholder="male, female or neither" required>
+      <p>Sex:</p><input type="text" name="sex" v-model="sex" placeholder="male, female or neither" required>
 
 
       <br /><br />
 
-      <a class="Patient" href="hippa1">Modal</a>
+      <a class="waves-effect waves-light btn modal-trigger" @click="onSubmitInfo" href="#hippa1">Save Details</a>
 
     </center>
 
@@ -38,5 +34,27 @@
   </div>
 
 </template>
+
+<script>
+export default {
+  name: 'PatientOnboarding',
+  data() {
+    return {
+      firstName: "",
+      lastName: "",
+      ssn: "",
+      dob: "",
+      sex: ""
+    }
+  },
+  methods: {
+    onSubmitInfo() {
+      console.log(this.firstName + this.lastName + this.ssn + this.dob + this.sex)
+      this.$router.push("/PatientHippa")
+    }
+    
+  }
+}
+</script>
 
 
